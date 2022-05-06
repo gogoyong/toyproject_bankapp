@@ -1,0 +1,138 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 375px;
+  height: 812px;
+  top: -897px;
+  left: -1073px;
+  border-style: solid;
+  background-color: #EEECE5;
+}
+li {
+  list-style:none;
+}
+
+/* 상단 : box */
+.box {
+  display:flex;
+  height: 44px;
+  position: relative
+}
+.box .time{
+  font-family: 'Source Sans Pro', sans-serif;
+  position: absolute;
+  left: 21px;
+  top: 7px;
+  width: 54px;
+  height: 20px;
+  text-align:center;
+  line-height: 20px;
+}
+
+/* 우측 상단 와이파이, 배터리 */
+.box .nav{ 
+  height: 44px; 
+}
+.box .nav .antenna{
+  position: absolute;
+  width: 17px;
+  height: 10.67px;
+  right: 64px;
+  top: 17.67px;
+}
+
+.box .nav .wifi{
+  position: absolute;
+  width: 15.33px;
+  height: 11px;
+  right: 43.67px;
+  top: 17.33px;
+}
+.box .nav .battery{
+  position: absolute;
+  width: 24.33px;
+  height: 11.33px;
+  right: 14.34px;
+  top: 17.33px;
+}
+
+
+/* 본문 : main */
+.main {
+  height: 680px;
+  /* border-style:solid; */
+  margin-top:12px;
+}
+/* 본문1 : 생활비, 아바타, 버튼 */
+.main .header{
+  position:relative;
+  width: 327px;
+  height: 43px;
+  left: 27px;
+  top: 0px;
+}
+.main .header .avatar{
+  left: 8px;
+  position:absolute;
+}
+.main .header .life{
+  display:block;
+  margin:8px 150px 8px 128px;
+  text-align: center;
+}
+.main .header .btn{
+  position: absolute;
+  width: 66px;
+  height: 24px;
+  left: 261px;
+  top: 9.5px;
+}
+
+/* 본문2 : 계좌 */
+.account {
+  border-style:solid;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
+  border-radius: 12px;
+  margin:0 48px;
+  position:relative;
+}
+
+.account span {
+  position: absolute;
+  left: 26.16%;
+  right: 25.26%;
+  top: 9.03%;
+  bottom: 77.42%;
+
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: -0.24px;
+
+  color: #858585;
+}
+
+
+
+/* 본문3 : 링크 */
+.link {
+  border-style:solid
+}
+
+/* 본문4: 거래내역 */
+.history {
+  border-style:solid
+}
+/* .history img{ */
+/* 올림버튼,, 중앙 상단에 정렬해줘야 함 */
+/* } */
+
+/* 하단 : menu */
+.menu {
+  border-style:solid;
+}

@@ -1,1 +1,0 @@
-# toyproject_bankapp
