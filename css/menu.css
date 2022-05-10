@@ -1,0 +1,52 @@
+/* 하단 : menu */
+.menu {
+  position: absolute;
+  width: 375px;
+  height: 76px;
+  left: 0px;
+  top: 736px;
+  
+  background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+  
+  }
+  
+  .menu ul li{
+    position:relative;
+  }
+  
+  .menu ul li button{
+    border:0;
+    background-color: transparent;
+  }
+  
+  .menu ul li:first-child{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 35px;
+    top: 24px;
+  }
+  
+  .menu ul li:nth-child(2){
+    position: absolute;
+    width: 30px;
+    height: 23.44px;
+    left: 123px;
+    top: 28px;
+  }
+  
+  .menu ul li:nth-child(3){
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 218px;
+    top: 28px;
+  }
+  
+  .menu ul li:last-child{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 304px;
+    top: 24px;
+  }

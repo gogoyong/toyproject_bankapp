@@ -1,0 +1,219 @@
+.main {
+  position: absolute;
+width: 377px;
+height: 623px;
+left: 0px;
+top: 113px;
+overflow-y: scroll;
+overflow-x:hidden;
+}
+.main::-webkit-scrollbar {
+  display: none;
+  }
+
+.title {
+  position:relative;
+}
+/* 닫기 */
+.title div:first-child{
+  position: absolute;
+  width: 26px;
+  height: 21px;
+  left: 336px;
+  top: 44px;
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 21px;
+  /* identical to box height */
+  
+  letter-spacing: -0.24px;
+  
+  color: #000000;
+}
+/* 지출관리 */
+.title div:last-child{
+  position: absolute;
+  width: 93px;
+  height: 36px;
+  left: 30px;
+  top: 33px;
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  /* identical to box height */
+  
+  letter-spacing: -0.24px;
+  
+  color: #000000;
+}
+.title a{
+  text-decoration: none;
+}
+.money {
+  position:relative;
+
+}
+
+/* 기준금액설정 */
+.money span:first-child{
+  position: absolute;
+width: 99px;
+height: 27px;
+left: 29px;
+top: 102px;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #444444;
+
+}
+
+/* 2,100,000원 */
+.money span:last-child{
+  position: absolute;
+  width: 131px;
+  height: 36px;
+  left: 206px;
+  top: 29px;
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  
+  text-align: right;
+  letter-spacing: -0.24px;
+  
+  color: #FF5F00;
+}
+
+.money input{
+  position: absolute;
+width: 308px;
+height: 28px;
+left: 29px;
+top: 157px;
+
+}
+
+input, progress {
+  accent-color: #ffdb4c;
+}
+
+.report {
+  position:relative;
+}
+
+
+/* 일간 리포트 */
+.report div{
+  position: absolute;
+  width: 86px;
+  height: 27px;
+  left: 29px;
+  top: 175px;
+  
+  font-family: 'Noto Sans CJK KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+  /* identical to box height */
+  
+  letter-spacing: -0.24px;
+  
+  color: #444444;
+  
+}
+
+/* 막대그래프 */
+.report canvas{
+  position: absolute;
+width: 347px;
+left: 30px;
+top: 219px;
+overflow-x: scroll;
+}
+
+/* 6월 지출 패턴 */
+.patten div{
+  position: absolute;
+width: 100px;
+height: 27px;
+left: 30px;
+top: 463px;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #444444;
+}
+
+/* 도넛그래프 */
+.patten canvas{
+  position: absolute;
+  width: 308px;
+  height: 308px;
+  left: 36px;
+  top: 508px;
+}
+
+/* 6월 항목묶음 */
+.main ul {
+position: absolute;
+width: 308px;
+height: 233.63px;
+left: 35px;
+top: 926px;
+}
+
+.main ul li span:first-child{
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: -0.24px;
+
+color: #000000;
+display:flex;
+}
+
+.main ul li span:last-child{
+  font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+text-align: right;
+letter-spacing: -0.24px;
+
+color: #858585;
+display:flex;
+justify-content: flex-end;
+}

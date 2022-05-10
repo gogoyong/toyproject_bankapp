@@ -2,66 +2,25 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   width: 375px;
   height: 812px;
-  top: -897px;
-  left: -1073px;
-  border-style: solid;
+  left:  50%;
   background-color: #EEECE5;
-}
+  position:absolute;
+  transform: translateX(-50%);
+} 
+
 li {
   list-style:none;
 }
 
-/* 상단 : box */
-.box {
-  display:flex;
-  height: 44px;
-  position: relative
-}
-.box .time{
-  font-family: 'Source Sans Pro', sans-serif;
-  position: absolute;
-  left: 21px;
-  top: 7px;
-  width: 54px;
-  height: 20px;
-  text-align:center;
-  line-height: 20px;
-}
-
-/* 우측 상단 와이파이, 배터리 */
-.box .nav{ 
-  height: 44px; 
-}
-.box .nav .antenna{
-  position: absolute;
-  width: 17px;
-  height: 10.67px;
-  right: 64px;
-  top: 17.67px;
-}
-
-.box .nav .wifi{
-  position: absolute;
-  width: 15.33px;
-  height: 11px;
-  right: 43.67px;
-  top: 17.33px;
-}
-.box .nav .battery{
-  position: absolute;
-  width: 24.33px;
-  height: 11.33px;
-  right: 14.34px;
-  top: 17.33px;
-}
 
 
 /* 본문 : main */
 .main {
-  height: 680px;
-  /* border-style:solid; */
+  max-height: 680px;
   margin-top:12px;
 }
+
+
 /* 본문1 : 생활비, 아바타, 버튼 */
 .main .header{
   position:relative;
@@ -70,23 +29,37 @@ li {
   left: 27px;
   top: 0px;
 }
-.main .header .avatar{
+.main .header a:first-child{
   left: 8px;
   position:absolute;
 }
-.main .header .life{
-  display:block;
-  margin:8px 150px 8px 128px;
-  text-align: center;
+.main .header span{
+/* 생활비 */
+position: absolute;
+width: 49px;
+height: 27px;
+left: 128px;
+top: 8px;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 27px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #000000;
 }
-.main .header .btn{
+.main .header a:nth-child(3){
   position: absolute;
   width: 66px;
   height: 24px;
   left: 261px;
   top: 9.5px;
 }
-
 /* 본문2 : 계좌 */
 .account {
   border-style:solid;
@@ -94,45 +67,203 @@ li {
   box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19);
   border-radius: 12px;
   margin:0 48px;
-  position:relative;
+  width: 279px;
+  height: 155px;
+  top: 132px;
+  position:absolute;
+  float:none;
 }
 
-.account span {
+.account > ul > li > span:first-child{
+/* 355-673877-78773 */
+position: absolute;
+left: 26.16%;
+right: 25.26%;
+top: 9.03%;
+bottom: 77.42%;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #858585
+}
+
+.account > ul > li > span:nth-child(2){
+/* 이체 */
+
+
+position: absolute;
+width: 26px;
+height: 21px;
+left: 236px;
+top: 14px;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: -0.24px;
+
+color: #000000;
+}
+
+/* 1,240,000원 */
+.account p {
   position: absolute;
-  left: 26.16%;
-  right: 25.26%;
-  top: 9.03%;
-  bottom: 77.42%;
+left: 21.22%;
+right: 21.22%;
+top: 32.9%;
+bottom: 43.87%;
 
-  font-family: 'Noto Sans CJK KR';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
-  /* identical to box height */
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+/* identical to box height */
 
-  text-align: center;
-  letter-spacing: -0.24px;
+text-align: center;
+letter-spacing: 2px;
 
-  color: #858585;
+color: #000000;
 }
 
+.account > ul > li > input {
+  position: absolute;
+  width: 202px;
+  height: 17px;
+  left: 32px;
+  top: 103px;
+}
+input, progress {
+  accent-color: #ffdb4c;
+}
+.account > ul > li img{
+  /* mdi_bar_chart */
+position: absolute;
+width: 24px;
+height: 24px;
+left: 241px;
+top: 98px;
+}
 
+.account > ul > li:last-child{
+  /* 5일 동안 210,000원 남음 */
+
+
+position: absolute;
+left: 22.04%;
+right: 21.22%;
+top: 82.58%;
+bottom: 3.87%;
+
+font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+
+color: #858585;
+
+}
 
 /* 본문3 : 링크 */
 .link {
-  border-style:solid
+  position: absolute;
+  width: 262px;
+  height: 21px;
+  left: 43px;
+  top: 311px;
+  font-family: 'Noto Sans CJK KR';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+display:flex;
 }
+
 
 /* 본문4: 거래내역 */
 .history {
-  border-style:solid
-}
-/* .history img{ */
-/* 올림버튼,, 중앙 상단에 정렬해줘야 함 */
-/* } */
+/* 사용내역 */
+position: absolute;
+width: 375px;
+height: 383px;
+left: 0px;
+top: 353px;
 
-/* 하단 : menu */
-.menu {
-  border-style:solid;
+background: #F5F5F5;
+/* 사용내역 그림자 */
+box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+border-radius: 30px 30px 0px 0px;
 }
+
+.history > img{
+/* 올림버튼 */
+position: absolute;
+left: 43.2%;
+right: 44%;
+top: 1.12%;
+bottom: 98.32%;
+background: #C4C4C4;
+border-radius: 4px;
+cursor:grab;
+}
+
+/* 올림버튼 누르면! */
+.history img:active{
+  background-color:red;
+}
+
+.history > .plan {
+/* 저금통 */
+position: absolute;
+width: 308px;
+height: 49px;
+left: 30px;
+top: 23px;
+overflow-x: scroll;
+}
+.plan::-webkit-scrollbar {
+  display: none;
+  }
+
+
+.history > .plan > li:first-child{
+  width:97px;
+  height:47px;
+  position: absolute;
+left: 0%;
+right: 40.12%;
+top: 0%;
+bottom: 0%;
+
+background: #FF5F00;
+border-radius: 6px 0px 0px 6px;
+}
+
+.history > .plan > li:nth-child(2){
+  position: absolute;
+background: #FEB700;
+border-radius: 6px 0px 0px 6px;
+left: 175px;
+width: 121px;
+}
+

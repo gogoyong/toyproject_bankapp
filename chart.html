@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Project - Ryu Yongwook</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      width: 375px;
+      height: 812px;
+      /* left: 50%; */
+      position:absolute;
+      transform: translateX(-50%);
+      animation: change 0.5s ease forwards;
+      margin: 0 0 0 0;
+      }
+      li {
+      list-style:none;
+      }
+
+
+    @keyframes change {
+    from {
+    transform: translateY(100%);
+    visibility: visible;
+    }
+
+    to {
+    transform: translateX(0%);
+    }
+    }
+
+  </style>
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/box.css">
+  <link rel="stylesheet" href="./css/chart.css">
+</head>
+<body>
+  <!-- 상단 박스부 -->
+  <div class="box">
+    <span>9:41</span>
+    <div class="nav">
+      <span><img src="./images/Cellular Connection.png" alt="cellular" /></span>
+      <span><img src="./images/Wifi.png" alt="wifi" /></span>
+      <span><img src="./images/Battery.png" alt="battery" /></span>
+    </div>
+  </div>
+
+  <!-- 지출관리 -->
+  <div class="title">
+    <div><a href="./index.html">닫기</a></div>
+    <div>지출 관리</div>
+  </div>
+
+  <!-- 본문(스크롤) -->
+  <div class="main">
+    <div class="money">
+      <span>기준금액설정</span>
+      <span>2,100,000원</span>
+      <br />
+      <input type="range" />
+    </div>
+
+    <div class="report">
+      <div>일간 리포트</div>
+      <canvas id="myChart" style="width: 347px;"></canvas>
+    </div>
+
+    <div class="patten">
+      <div>6월 지출 패턴</div>
+      <canvas id="myPatten" style="width: 347px"></canvas>
+    </div>
+
+    <ul>
+      <li><img src="./images/1.svg" alt="oil"/><span>주유비</span><span>56,000원</span></li>
+      <li><img src="./images/2.svg" alt="health"/><span>건강관리비</span><span>80,000원</span></li>
+      <li><img src="./images/3.svg" alt="food"/><span>외식비</span><span>233,000원</span></li>
+      <li><img src="./images/4.svg" alt="market"/><span>장보기</span><span>390,000원</span></li>
+      <li><img src="./images/5.svg" alt="shop"/><span>상점</span><span>46,000원</span></li>
+    </ul>
+  </div>
+  
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['02', '04', '06', '08', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28',
+        '30'], // x축의 이름
+        datasets: [{
+          label: '범례',
+          data: [80000, 90000, 70000, 90000, 75000, 73000, 99000, 77000, 95000, 75000, 62000, 80000, 95000,
+            79000, 82000
+          ],
+          backgroundColor: 'green',
+          barThickness: 5
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+
+     // 도넛 모양 차트 만들기
+
+     const pattenDataSet = {
+     labels: ['oiling', 'health', 'eatout', 'shopping', 'mart'],
+     datasets: [
+     {
+     data: [56, 80, 233, 390, 46],
+     backgroundColor: ['#FEC229', '#C4C4C4', '#00BDB2', '#BD5B00', '#0057BD'],
+     cutout: 110,
+     },
+     ],
+     };
+
+     const configPatten = {
+     type: 'doughnut',
+     data: pattenDataSet,
+     options: {
+      responsive: false,
+      plugins: {
+     legend: {
+     display: false,
+     },
+     },
+     },
+     };
+
+     const myPatten = new Chart(document.getElementById('myPatten'), configPatten);
+
+   </script>
+
+    <!-- 하단부 메뉴 -->
+    <div class="menu">
+      <ul>
+        <li><button><img src="./images/mdi_home.png" alt="home"></button></li>
+        <li><button><img src="./images/Group 28.png" alt="slide"></button></li>
+        <li><button><img src="./images/skype.png" alt="chat"></button></li>
+        <li><button><img src="./images/more.svg" alt="more"></button></li>
+      </ul>
+    </div>
+</body>
+</html>

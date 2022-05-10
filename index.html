@@ -5,79 +5,100 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toy Project- Ryu Yongwook</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/box.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Source+Sans+Pro&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <script defer src='./js/main.js'></script>
 </head>
 <body>
   <!-- 상단 박스부 -->
   <div class="box">
-    <span class="time">9:41</span>
+    <span>9:41</span>
     <div class="nav">
-      <span class="antenna"><img src="./images/Cellular Connection.png" alt=""></span>
-      <span class="wifi"><img src="./images/Wifi.png" alt=""></span>
-      <span class="battery"><img src="./images/Battery.png" alt=""></span>
+      <span><img src="./images/Cellular Connection.png" alt="cellular" /></span>
+      <span><img src="./images/Wifi.png" alt="wifi" /></span>
+      <span><img src="./images/Battery.png" alt="battery" /></span>
     </div>
   </div>
 
-  <!-- 본문 화면, 생활비, 계좌, 링크, 리스트 -->
-  <div class="main">
-    <!-- 생활비, 아바타, 버튼 -->
-    <div class="header">
-      <a href="/" class="avatar"><img src="./images/아바타.png" alt="" /></a>
-      <span class="life">생활비</span>
-      <a href="/" class="btn"><img src="./images/검색,코드스캔.png" alt="" /></a>
-    </div>
-
-    <!-- 계좌 -->
-    <main>
-      <div class="account">
-        <ul>
-          <li>
-            <span>355-673877-78773</span>
-            <span>이체</span>
-          </li>
-          <li>1,240,000원</li>
-          <li><input type="range" /><img src="./images/mdi_bar_chart.png" alt=""></li>
-          <li>5일 동안 210,000원 남음</li>
-        </ul>
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"> -->
+        <div class="main">
+          <!-- 생활비, 아바타, 버튼 -->
+          <div class="header">
+            <a href="/"><img src="./images/아바타.png" alt="avatar" /></a>
+            <span>생활비</span>
+            <a href="/"><img src="./images/검색,코드스캔.png" alt="search" /></a>
+          </div>
+      
+          <!-- 계좌 -->
+          <div class="account">
+            <ul>
+              <li>
+                <span>355-673877-78773</span>
+                <span>이체</span>
+              </li>
+              <li><p>1,240,000원</p></li>
+              <li><input type="range" /><a href="./chart.html"><img src="./images/mdi_bar_chart.png" alt="chart" /></a></li>
+              <li>5일 동안 210,000원 남음</li>
+            </ul>
+          </div>
+          <!-- 계좌 끝 -->
+      
+          <!-- 링크 -->
+          <div class="link">지금 낮은 이자로 생활대출을 신청하세요! <a href="/">Go</a></div>
+      
+          <!-- 사용내역 history -->
+          <div class="history">
+            <img src="./images/올림버튼.png" alt="button" id="dragdiv" />
+            <ul class="plan">
+              <li>여행가자! <br />842,200원</li>
+              <li>냉장고사기 <br />142,200원</li>
+            </ul>
+            <div>
+              <div class="day">
+                <div class="when"></div>
+              </div>
+            </div>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      <!-- </div> -->
+      <!-- <div class="swiper-slide">
+        
       </div>
-    </main>
-    <!-- 계좌 끝 -->
-
-    <!-- 링크 -->
-    <div class="link">지금 낮은 이자로 생활대출을 신청하세요! <a href="/">Go</a></div>
-
-    <!-- 사용내역 history -->
-    <div class="history">
-      <img src="./images/올림버튼.png" alt="">
-      <ul class="plan">
-        <li>여행가자! <br>842,200원</li>
-        <li>냉장고사기 <br>142,200원</li>
-      </ul>
-      <div>
-        <div class="when"></div>
+      <div class="swiper-slide">
+        
       </div>
-      <ul>
-        <li><span></span><span></span></li>
-        <li><span></span><span></span></li>
-        <li><span></span><span></span></li>
-        <li><span></span><span></span></li>
-        <li><span></span><span></span></li>
-      </ul>
     </div>
-  </div>
-  
+  </div> -->
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {});
+  </script>
+
+    <!-- 본문 화면, 생활비, 계좌, 링크, 리스트 -->
+    
   <!-- 하단부 메뉴 -->
   <div class="menu">
     <ul>
-      <li><button><img src="./images/mdi_home.png" alt=""></button></li>
-      <li><button><img src="./images/Group 28.png" alt=""></button></li>
-      <li><button><img src="./images/skype.png" alt=""></button></li>
-      <li><button><img src="./images/more.svg" alt=""></button></li>
+      <li><button><img src="./images/mdi_home.png" alt="home"></button></li>
+      <li><button><img src="./images/Group 28.png" alt="slide"></button></li>
+      <li><button><img src="./images/skype.png" alt="chat"></button></li>
+      <li><button><img src="./images/more.svg" alt="more"></button></li>
     </ul>
   </div>
 </body>
